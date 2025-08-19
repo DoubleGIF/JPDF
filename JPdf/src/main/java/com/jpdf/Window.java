@@ -73,10 +73,8 @@ public class Window extends JFrame{
         });
 
         JPanel text2 = new JPanel();
-
         cardPanel.add(text2,"wd");
-
-
+        
         JPanel function_JPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 
         JButton text_b = new JButton("PDF转图片");
@@ -97,14 +95,12 @@ public class Window extends JFrame{
             }
         });
         function_JPanel.add(text_c);
-
-
+        
         add(function_JPanel, BorderLayout.NORTH);
         add(cardPanel, BorderLayout.CENTER);
 
         // 默认显示第一个面板
         cardLayout.show(cardPanel, "fileDropPanel");
-
 
         //底部消息展示
         JLabel msg = new JLabel("tip:这是一个测试文本。This is a test text.");
@@ -115,10 +111,10 @@ public class Window extends JFrame{
 
     public static void main(String[] args) {
         // 在事件调度线程中创建和显示GUI
-
         SwingUtilities.invokeLater(() -> {
             new Window().setVisible(true);
         });
     }
 
 }
+
